@@ -11,8 +11,10 @@ navbar:
     - text: "Dashboard"
       icon: fa-bar-chart fa-lg
       menu:
-       - text: "Do you smoke?"
+       - text: "Airbnb"
          href: dashboard1.html
+       - text: "Instacart"
+         href: dashboard2.html
     - icon: fa-envelope fa-lg
       href: mailto:<st3340@cumc.columbia.edu>
     - icon: fa-github fa-lg

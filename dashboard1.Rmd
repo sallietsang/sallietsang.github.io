@@ -1,5 +1,5 @@
 ---
-title: "Dashboard"
+title: "Dashboard: Airbnb"
 output: 
   flexdashboard::flex_dashboard:
     orientation: columns
