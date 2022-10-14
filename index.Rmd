@@ -8,9 +8,35 @@ output:
 ---
 
 
-# A Biostatistics Master Student at the Columbia University
+## A Biostatistics Master Student at the Columbia University
 
 ![](images/img1.jpg)
+
+# Skills and Resume
+I have dedicated myself to augmenting my proficiency in 
+
+* R
+* SQL
+* SAS 
+* Tableau
+* data cleaning
+* data wrangling 
+* data visualization
+* buildling predictive models
+
+
+#### examples
+I have created a website with my classmateto provide information to health organizations and healthcare facilities
+about the characteristics of smokers and people who quit smoking in the United States, as well as
+the specific populations which need more attention
+
+* [DO YOU SMOKE?](https://lscelia.github.io/Smoking_in_US/index.html)
+
+Belows is the examples for dashboard
+
+
+#### resume
+If you interested in my academic and professional experience, let's click into my [Resume](Resume.html) page.
 
 # More about me...
 Welcome to my personal webpage and I would like to let you know more about me!
@@ -35,5 +61,3 @@ More interestingly, my family also got their bachelor's degree at the Columbia U
 It is a serendipity that I will step into this lovely campus again after 23 years ! 
 
 
-# Resume
-I have dedicated myself to augmenting my proficiency in R, SQL, SAS language and visualization tool Tableau. I possess the skills in data cleaning, wrangling and visualization.If you interested in my academic and professional experience, let's click into my [Resume](Resume.html) page.
