@@ -1,5 +1,5 @@
 ---
-title: "NYC precipitation"
+title: "NYC Weather"
 output: 
   flexdashboard::flex_dashboard:
     orientation: rows
@@ -59,27 +59,18 @@ ny_noaa_avg =
 #since we only need the year in 2010, we can filer the data 
 ny_noaa_clean_10 = ny_noaa_avg %>% 
   filter(date >= as.Date("2000-01-01") & date <= as.Date("2010-12-31")) %>% 
-  group_by(month) %>% 
+  group_by(month,year) %>% 
   mutate(mean_tmax_month = mean(tmax), 
          mean_tmin_month = mean(tmin)) %>% 
   filter( day == 1)
 ```
 
-Row {data-height=350}
------------------------------------------------------------------------
 
-```{r}
-ny_noaa_avg %>%  
-  filter(year == 2010) %>%
-  mutate(date = as.Date(date)) %>% 
-  plot_ly(x = ~date) %>% 
-  add_lines(y = ~snow, name = "snowfall") %>% 
-  layout(
-    title = "2010 NYC daily snowfall")
-```
 
 Row {data-height=650}
 -----------------------------------------------------------------------
+
+### Chart A
 ```{r}
 
 a <- ny_noaa_clean_10  %>% 
@@ -96,7 +87,7 @@ a <- ny_noaa_clean_10  %>%
 ggplotly(a)
 ```
 
-
+### Chart B
 ```{r}
 prcp_2010= 
   ny_noaa_avg %>% 
@@ -114,5 +105,43 @@ prcp_2010=
                                    hjust = 1, vjust = 1)) +
   expand_limits(y=c(0.5,6.5)) 
 ggplotly(prcp_2010)
+```
+
+
+
+Row {data-height=650}
+-----------------------------------------------------------------------
+### Chart C
+```{r}
+ny_noaa_avg %>%  
+  filter(year == 2010) %>%
+  mutate(date = as.Date(date)) %>% 
+  plot_ly(x = ~date) %>% 
+  add_lines(y = ~snow, name = "snowfall") %>% 
+  layout(
+    title = "2010 NYC daily snowfall")
+```
+
+### Chart D
+```{r}
+
+
+colors <- c('#4AC6B7', '#1972A4', '#965F8A', '#FF7070', '#C61951')
+
+fig <- ny_noaa_clean_10%>% 
+        filter(year == 2010) %>%
+  plot_ly(x = ~tmax, y = ~snow, z = ~prcp, color = ~ month , colors = colors,
+             marker = list(symbol = 'circle', sizemode = 'diameter'), sizes = c(5, 150)) %>% 
+    layout(
+      scene = list(
+      xaxis = list(title = "maximum temperature (F)"),
+      yaxis = list(title = "snow(mm)"),
+      zaxis = list(title = "precipitation(mm)"))
+  )
+
+
+
+fig
+
 ```
 
