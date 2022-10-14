@@ -3,6 +3,7 @@ title: "Order of Instacart"
 output: 
   flexdashboard::flex_dashboard:
     orientation: columns
+    source_code: embed
     vertical_layout: fill
 ---
 

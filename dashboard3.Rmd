@@ -1,0 +1,117 @@
+---
+title: "NYC precipitation"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: rows
+    source_code: embed
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(tidyverse)
+library(p8105.datasets)
+library(plotly)
+library(reshape2)
+library(cowplot)
+library(magrittr)
+data("ny_noaa")
+ny_noaa = tibble(ny_noaa)
+```
+
+
+
+
+```{r data cleaning, include=FALSE}
+ny_noaa_clean = 
+  ny_noaa %>% 
+  drop_na(prcp, snow, snwd, tmax, tmin) %>% 
+  mutate(
+    prcp = as.numeric(prcp),
+    snow = as.numeric(snow),
+    snwd = as.numeric(snwd),
+    tmax = as.numeric(tmax),
+    tmin = as.numeric(tmin)
+    ) %>% 
+  group_by(date) %>% 
+  summarize(prcp = mean(prcp),
+            snow = mean(snow),
+            snwd = mean(snwd),
+            tmax = mean(tmax),
+            tmin = mean(tmin))
+ny_noaa_avg = 
+  ny_noaa_clean %>% 
+  mutate(
+    year =  as.integer(strftime(date, "%Y")),
+    weekday =  as.integer(strftime(date, "%u")),
+    month =  as.integer(strftime(date, "%m")),
+    week =  as.integer(strftime(date, "%W")),
+    day =  as.integer(strftime(date, "%d"))
+    ) %>% 
+  mutate(
+    weekday = factor(weekday, levels = 1:7, 
+                     labels = c("Mon", "Tue", "Wed", "Thr", "Fri", "Sat", "Sun"), 
+                     ordered = TRUE),
+    month = factor(month, levels = 1:12, labels = month.abb, ordered = TRUE)
+  ) %>% 
+  group_by(month) %>% 
+  mutate(monthweek = 1 + week - min(week))
+
+#since we only need the year in 2010, we can filer the data 
+ny_noaa_clean_10 = ny_noaa_avg %>% 
+  filter(date >= as.Date("2000-01-01") & date <= as.Date("2010-12-31")) %>% 
+  group_by(month) %>% 
+  mutate(mean_tmax_month = mean(tmax), 
+         mean_tmin_month = mean(tmin)) %>% 
+  filter( day == 1)
+```
+
+Row {data-height=650}
+-----------------------------------------------------------------------
+```{r}
+
+a <- ny_noaa_clean_10  %>% 
+  ggplot(aes(year, prcp)) +
+  geom_point(size = 0.5) +
+  geom_smooth(method = "loess") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 10),
+        axis.title.x = element_blank(),
+        legend.position = "none") +
+  labs(title = "Monthly precipitation(mm) in 10 years", subtitle = "NYC Precipitation: January 2000 - November 2010", y = "Precipitation(mm)", x = "Year") +
+  facet_wrap(~month) +
+  NULL
+
+ggplotly(a)
+```
+
+
+```{r}
+prcp_2010= 
+  ny_noaa_avg %>% 
+  filter(year == 2010) %>% 
+  ggplot(aes(weekday, monthweek, fill =prcp )) + 
+  geom_tile(color = "white") + 
+  geom_text(aes(label = day), size = 3) + 
+  scale_fill_gradient2(low = "darkgreen", mid = "white", high = "darkred") +
+  facet_wrap(~month, nrow = 3) + 
+  scale_y_reverse(name = "Week") + 
+  xlab("Day") +
+  theme_bw() +
+  theme(panel.grid = element_blank(),
+        axis.text.x = element_text(angle = 30, 
+                                   hjust = 1, vjust = 1)) +
+  expand_limits(y=c(0.5,6.5)) 
+ggplotly(prcp_2010)
+```
+
+Row {data-height=350}
+-----------------------------------------------------------------------
+
+```{r}
+ny_noaa_avg %>%  
+  filter(year == 2010) %>%
+  mutate(date = as.Date(date)) %>% 
+  plot_ly(x = ~date) %>% 
+  add_lines(y = ~snow, name = "snowfall") %>% 
+  layout(
+    title = "2010 NYC daily snowfall")
+```
