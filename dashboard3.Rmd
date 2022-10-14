@@ -65,6 +65,19 @@ ny_noaa_clean_10 = ny_noaa_avg %>%
   filter( day == 1)
 ```
 
+Row {data-height=350}
+-----------------------------------------------------------------------
+
+```{r}
+ny_noaa_avg %>%  
+  filter(year == 2010) %>%
+  mutate(date = as.Date(date)) %>% 
+  plot_ly(x = ~date) %>% 
+  add_lines(y = ~snow, name = "snowfall") %>% 
+  layout(
+    title = "2010 NYC daily snowfall")
+```
+
 Row {data-height=650}
 -----------------------------------------------------------------------
 ```{r}
@@ -103,15 +116,3 @@ prcp_2010=
 ggplotly(prcp_2010)
 ```
 
-Row {data-height=350}
------------------------------------------------------------------------
-
-```{r}
-ny_noaa_avg %>%  
-  filter(year == 2010) %>%
-  mutate(date = as.Date(date)) %>% 
-  plot_ly(x = ~date) %>% 
-  add_lines(y = ~snow, name = "snowfall") %>% 
-  layout(
-    title = "2010 NYC daily snowfall")
-```

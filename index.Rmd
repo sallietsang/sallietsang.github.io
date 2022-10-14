@@ -32,7 +32,7 @@ the specific populations which need more attention
 
 * [DO YOU SMOKE?](https://lscelia.github.io/Smoking_in_US/index.html)
 
-Here are the examples of dashboards
+Here are the examples of dashboard
 * [Airbnb](dashboard1.html)
 * [Instacart](dashboard2.html)
 * [NYC Precipiatation](dashboard3.html)
