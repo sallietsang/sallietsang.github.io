@@ -15,10 +15,12 @@ __TECHNICAL SKILLS__
 
 __EDUCATION__    
 [Columbia University](https://www.columbia.edu/)             2021-Present 
+
 * Master of Science, Biostatistics in Public Health Data Science
 * Courses: Biostatical Methods, Data Science, Survival Analysis, Natural Language Processing, SQL, SAS, Statistical Inference
 
 [City University of Hong Kong](https://www.cityu.edu.hk/)    2016-2020
+
 * Bachelor in Biology and Chemistry (BCH) with minor in Media Communication__
 * Courses: Computer Science, Calculus and Applied Statistic
 * Opened a Facebook page “Blood cycle for student hk” targeted on CityU students to
@@ -37,6 +39,7 @@ __RESEARCH EXPERIENCE & PROJECTS__
 
 
 __Machine Learning Course Project, Columbia University__ 03/2022-04/2022
+
 * Conducted exploratory data analysis to visualize the relationship between 17 predictors and response in R
 * Built 8 Supervised Machine Learning Models (Linear Regression, LASSO, Ridge, Elastic Net, GAM, MARS PCR,
 Random Forest) to predict Parkinson’s Disease severity based on patients’ age, sex, and vocal features
@@ -68,30 +71,8 @@ biogeography of public facilities and prevent the outbreak of infectious disease
 
 
 
-__EXTRA-CURRICULAR ACTIVITIES AND COMMUNITY SERVICE__
-
-__Summer Exchange, College of Engineering, Peking University__    07/2019 - 08/2019
--  Engaged in the course “Artificial Organ Engineering”
 
 
-__Summer Exchange, National University of Singapore(NUS)__ 05/2019
-
-__City University of Hong Kong__    10/2016-12/2016
-
-__Position: Vice President of Election Board of the 24th Biology and Chemistry Society__
-
-- Conducted and supervised the election according to department constitution
-
-- Coordinated the election events including propagation,student consultation and voting
-procedure
-
--  Summarized the election results and submitted the financial and work report
 
 
-__Ebenezer School & Home for Visually Impaired__  07/ 2016-09/2016
-
-__Position: Volunteer__
-
-
--Read out book and notes to assist the blind preparing for their Braille examination
 
