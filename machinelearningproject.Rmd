@@ -1,0 +1,14 @@
+---
+title: Machine Learning Project 
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: cerulean
+---
+
+
+## Parkinson’s Disease Symptom Severity Prediction based on Patient Age, Sex, and Vocal Features
+
+<iframe src="project/P8106_finalreport.pdf" width="100%" height="1000px">
+
