@@ -24,7 +24,7 @@ navbar:
       icon: fa-thin fa-file
       href: Resume.html
     - icon: fa-envelope fa-lg
-      href: mailto:<st3340@cumc.columbia.edu>
+      href: mailto:<szepui.tsang@caa.columbia.edu>
     - icon: fa-github fa-lg
       href: https://github.com/sallietsang
     - icon: fa-linkedin fa-lg
