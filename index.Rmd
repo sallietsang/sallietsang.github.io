@@ -15,13 +15,34 @@ output:
 
 
 # Shiny App, Dashbaord & Tableau
+
+### Shiny App 
+
+* Example 1: 
+
+![](images/shiny1.png)
+
+![](images/shiny2.JPG)
+
+* Example 2: 
+![](images/shiny4.PNG)
+
+
+
+
+### Tableau 
+
+
+### Webiste 
+
 I have created a website with my classmateto provide information to health organizations and healthcare facilities
 about the characteristics of smokers and people who quit smoking in the United States, as well as
 the specific populations which need more attention
 
 * [DO YOU SMOKE?](https://lscelia.github.io/Smoking_in_US/index.html)
 
-Here are the examples of dashboard
+### Dashboard 
+
 * [Airbnb](dashboard1.html)
 * [Instacart](dashboard2.html)
 * [NYC Precipiatation](dashboard3.html)
