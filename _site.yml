@@ -4,12 +4,22 @@ output_dir: "."
 navbar:
   title: "Home"
   right:
+    - text: "Shiny"
+      icon: fa-solid fa-bars
+      menu:
+        - text: "Example1"
+          href: https://hhear.shinyapps.io/dashboard1/
+    - text: "Tableau"
+      icon: fa-regular fa-chart-line
+      menu:
+        - text: "Example1"
+          href: https://lscelia.github.io/Smoking_in_US/index.html
     - text: "Projects"
       icon: fa-file-text-o fa-lg
       menu:
         - text: "Do you smoke?"
           href: https://lscelia.github.io/Smoking_in_US/index.html
-        - text: " Parkinson’s Disease Prediction"
+        - text: "Parkinson’s Disease Prediction"
           href: machinelearningproject.html
     - text: "Dashboard"
       icon: fa-bar-chart fa-lg
