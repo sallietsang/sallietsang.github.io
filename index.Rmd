@@ -14,6 +14,8 @@ output:
 ![](images/Intro3.png)
 ![](images/Intro4.png)
 
+### Know more about Sallie !
+
 
 # 2.Shiny App, Dashbaord & Tableau
 

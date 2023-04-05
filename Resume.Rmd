@@ -2,6 +2,8 @@
 
 __RESUME PDF VERSION__
 
-<iframe src="project/SzePui.pdf" width="100%" height="800px">
+```{r echo= FALSE}
+#<iframe src="project/SzePui.pdf" width="100%" height="800px">
+```
 
-
+### If you are interested in my resume, please contact me via st3340@caa.columbia.edu 
