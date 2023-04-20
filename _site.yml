@@ -8,7 +8,7 @@ navbar:
       icon: fa-solid fa-bars
       menu:
         - text: "Example1"
-          href: https://hhear.shinyapps.io/dashboard1/
+          href: https://hhear.shinyapps.io/dashboard2/
     - text: "Tableau"
       icon: fa-regular fa-chart-line
       menu:

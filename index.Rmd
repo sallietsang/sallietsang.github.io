@@ -26,16 +26,13 @@ Establishing a Shiny app for a decision-making team can offer several benefits, 
 
 * Increased Efficiency: With a Shiny app, decision-makers can access the data they need quickly and easily, without having to spend time gathering and analyzing data from different sources. This can lead to faster and more efficient decision-making.
 
-I am responsible for HEEAR to design Shiny App for interactive analysis dashboard to facilitate investigator decision making. I will establish hypothesis-free exploratory analyses to uncover unforeseen trends. Here are two examples.
+I am responsible for HEEAR to design Shiny App for interactive analysis dashboard to facilitate investigator decision making. I cleaned, managed the data as well as established hypothesis-free exploratory analyses to uncover unforeseen trends. Here are examples.
 
-* **Example 1: [Biological Responses to Tobacco Smoke Exposure in Ill Children](https://hhear.shinyapps.io/dashboard1/)** 
+* **Example 1: [The Dynamics of Exposure, Pthalates and Asthma in a Randomized Trial ](https://hhear.shinyapps.io/dashboard2/)** 
 
 ![](images/shiny1.png)
-
-![](images/shiny2.JPG)
-
-* **Example 2: Asthma Project**
-![](images/shiny4.PNG)
+![](images/shiny1b.png)
+![](images/shiny1c.png)
 
 ### Tableau 
  Tableau is a powerful data visualization tool that allows users to create interactive and visually appealing charts, graphs, and dashboards. I am currently preparing for the exam *Tableau Desktop Specialist*. Attached is one of my learning works using Tableau. 
